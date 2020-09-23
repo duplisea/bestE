@@ -1,0 +1,24 @@
+Package: bestE
+Type: Package
+Title: Find the best explanatory variable for a response variable and the best shape constrainted model to describe the relationship
+Version: 0.1.0
+Author: Daniel Duplisea
+Maintainer: Daniel Duplisea <daniel.duplisea@dfo-mpo.gc.ca>
+Description: In fisheries, we are often in the search for an explanatory variable for a ecological process but we do not know what the
+    best one is or the most appropriate shape for the relationship. So for example we might be interested in the impact of water 
+    temperature on fish population growth rate. We may have 30 different measures of temperature and we are not exactly sure how each
+    of them might impact population growth rate. This package fits relationships between many different explanatory variables and a
+    response variable (univariate, i.e. one at a a time) and then finds the best fitting model to this using shape constrained GAM 
+    models. It then selects
+    the best variable and models based on AIC and significance of the smoother term. It is up to the user to determine which 
+    explanatory variable and model makes sense with their hypothesis descending the rank of the best fitting variables and models.
+    Multivariate models are not currently implemented but this is a possible extension without too much difficulty, the problem is that
+    if one does not know what is the best variable to describe a process or what is the shape of the functional process (hence using 
+    this package) then it is even less likely that they will know how multiple variables interact to describe a process. It is 
+    recommended that if you are building a house of cards, best make it a bungalow.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: 
+        scam
+RoxygenNote: 7.1.0
